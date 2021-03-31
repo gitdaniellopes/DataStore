@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Nome"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Age"
+        app:layout_constraintStart_toStartOf="@+id/etName"
+        app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+    <CheckBox
+        android:id="@+id/cbFemale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Feminino"
+        app:layout_constraintStart_toStartOf="@+id/etAge"
+        app:layout_constraintTop_toBottomOf="@+id/etAge" />
+
+    <CheckBox
+        android:id="@+id/cbMale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Masculino"
+        app:layout_constraintEnd_toEndOf="@+id/etAge"
+        app:layout_constraintStart_toEndOf="@+id/cbFemale"
+        app:layout_constraintTop_toTopOf="@+id/cbFemale" />
+
+    <Button
+        android:id="@+id/btLoad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Carregar"
+        app:layout_constraintEnd_toEndOf="@+id/cbFemale"
+        app:layout_constraintStart_toStartOf="@+id/cbFemale"
+        app:layout_constraintTop_toBottomOf="@+id/cbFemale" />
+
+    <Button
+        android:id="@+id/btSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Salvar"
+        app:layout_constraintEnd_toEndOf="@+id/cbMale"
+        app:layout_constraintStart_toStartOf="@+id/cbMale"
+        app:layout_constraintTop_toBottomOf="@+id/cbMale" />
+</androidx.constraintlayout.widget.ConstraintLayout>
